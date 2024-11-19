@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>  
+    <main class="container">
+        <h1>Gestión de Rutas entre Cali y Bogotá</h1>
+        <div class="box">
+            <form id="route-form">
+                <div class="form-in">
+                    <label for="code">
+                        Código de Ruta
+                        <input 
+                            type="text" 
+                            name="code"
+                            id="code"
+                            placeholder="Ingrese el código de la ruta"
+                            required
+                        >
+                    </label>
+                    <label for="price">
+                        Valor Pasaje
+                        <input 
+                            id="price" 
+                            name="price" 
+                            min="0" 
+                            step="0.01" 
+                            placeholder="Ingrese el valor del pasaje"
+                            required
+                        >
+                    </label>
+                    <label for="quantity">
+                        Cantidad Pasajeros
+                        <input 
+                            type="number" 
+                            name="quantity"
+                            id="quantity"
+                            placeholder="Ingrese número de pasajeros"
+                            required
+                        >
+                    </label>
+                </div>
+    
+                <div class="form-in">
+                    <label for="origin">
+                        Origen
+                        <input 
+                            type="text" 
+                            name="origin"
+                            id="origin"
+                            placeholder="Ingrese su ciudad de origen"
+                            required
+                        >
+                    </label>
+                    <label for="destiny">
+                        Destino
+                        <input 
+                            type="text" 
+                            name="destiny"
+                            id="destiny"
+                            placeholder="Ingrese su ciudad de destino"
+                            required
+                        >
+                    </label>
+                    <button type="submit">Agregar Ruta</button>
+                </div>
+                         
+            </form>
+            <article class="article-container">
+                <div class="cali-results">
+                    <p id="cali-routes">Rutas programadas para Cali: 0</p>                
+                    <p id="cali-passengers">Pasajeros que llegaron a Cali: 0</p>               
+                    <p id="cali-revenue">Ingresos de Cali: $0</p>              
+                </div>
+    
+                <div class="bogota-results">                
+                    <p id="bogota-routes">Rutas programadas para Bogotá: 0</p>
+                    <p id="bogota-passengers">Pasajeros que llegaron a Bogotá: 0</p>
+                    <p id="bogota-revenue">Ingresos de Bogotá: $0</p>
+                </div>
+                <p class="alert">
+                
+                </p>
+            </article>
+        </div>        
+        
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
