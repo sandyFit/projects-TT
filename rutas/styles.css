@@ -59,8 +59,18 @@ input {
     padding: 0.6rem;
     border-radius: 5px;
     border: none;
-    background-color: rgb(211, 215, 215);
+    background-color: #e0e7ff;
     box-sizing: border-box;
+    outline: none;
+}
+
+
+input::placeholder {
+    color: #818cf8;
+}
+
+input:focus {
+    border: 2px solid #818cf8;
 }
 
 button {
