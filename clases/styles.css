@@ -24,6 +24,7 @@ main {
     justify-content: center;
     margin-top: .6rem;
 }
+
 .box {
     width: 100%;
     display: flex;
@@ -31,7 +32,7 @@ main {
     gap: 6rem;
 }
 
-form {
+.student-form {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -41,6 +42,14 @@ form {
 h1 {
     text-align: center;
     color: #3730a3;
+}
+
+h2 {
+    text-align: center;
+    color: #3730a3;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 label {
@@ -91,12 +100,14 @@ button {
 }
 
 .article-container {
-    margin-top: 2rem;
+    margin-top: 4rem;
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
+    align-items: start;
     font-size: 1.3rem;
+    color: #3730a3;
 }
 
 .alert {
