@@ -3,12 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0e7490;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 100vh;
     width: 100%;
 
@@ -21,8 +24,7 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
-    margin-top: .6rem;
+    justify-content: center;   
 }
 
 .box {
@@ -33,6 +35,7 @@ main {
 }
 
 .student-form {
+    width: 100%;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -41,20 +44,21 @@ main {
 
 h1 {
     text-align: center;
-    color: #3730a3;
 }
 
 h2 {
-    text-align: center;
-    color: #3730a3;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
 
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
 label {
-    margin-top: 1.5rem;
-    color: #3730a3;
+    margin-top: 1.2rem;
     font-size: .88rem;
     font-weight: 600;
     display: flex;
@@ -63,32 +67,27 @@ label {
 }
 
 input {
-    margin-top: .2rem;
-    width: 20rem;
+    width: 100%;
     padding: 0.6rem;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
-    background-color: #e0e7ff;
+    background-color: #cffafe;
     box-sizing: border-box;
     outline: none;
 }
 
 
-input::placeholder {
-    color: #818cf8;
-}
-
 input:focus {
-    border: 2px solid #818cf8;
+    border: 2px solid #06b6d4;
 }
 
 button {
-    margin-top: 1.5rem;
     width: 20rem;
-    height: 2.5rem;
-    border-radius: 5px;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
     border: none;
-    background-color: #3730a3;
+    background-color: #0e7490;
     color: aliceblue;
     font-size: .88rem;
     font-weight: 500;
@@ -96,22 +95,76 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     box-sizing: border-box;
+}
 
+button:hover {
+    background-color: #0891b2;
 }
 
 .article-container {
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
-    font-size: 1.3rem;
-    color: #3730a3;
+}
+
+.failed-container {
+    margin-top: 2rem;
 }
 
 .alert {
-    color: rgb(32, 162, 32);
+    width: 30%;
+    color: #0d9488;
+    background-color: #ccfbf1;
     font-size: 1.2rem;
+    text-align: center;
     margin-top: 1rem;
+    position: absolute;
+    top: 1rem;   
+    border-radius: 3px;
+    padding: 0.5rem;
 }
+
+.message {
+    margin: .8rem 0;
+}
+
+.table-container {
+    width: 50rem;
+    margin-top: 5rem;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#students-table {
+    width: 100%;
+    margin-top: .4rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head {
+    background-color: #0e7490;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+

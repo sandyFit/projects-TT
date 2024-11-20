@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <p id="alert"></p>
     <main class="container">
         <h1>Gestión de Estudiantes</h1>
         <div class="box">
@@ -39,30 +40,85 @@
                             id="subject"
                         >
                     </label>
-                    <label for="grade">
-                        Nota
-                        <input 
-                            type="number"
-                            name="grade"
-                            id="grade"
-                            step="0.1" 
-                            min="0" 
-                            max="5"
-                        >
-                    </label>
+                    <div class="group">
+                        <label for="grade1">
+                            Nota 1
+                            <input 
+                                type="number"
+                                name="grade1"
+                                id="grade1"
+                                step="0.1" 
+                                min="0" 
+                                max="5"
+                            >
+                        </label>
+                        <label for="grade2">
+                            Nota 2
+                            <input 
+                                type="number"
+                                name="grade2"
+                                id="grade2"
+                                step="0.1" 
+                                min="0" 
+                                max="5"
+                            >
+                        </label>
+                        <label for="grade3">
+                            Nota 3
+                            <input 
+                                type="number"
+                                name="grade3"
+                                id="grade3"
+                                step="0.1" 
+                                min="0" 
+                                max="5"
+                            >
+                        </label>
+                    </div>
                 </div>
-                <button type="submit">Enviar</button>
-                <p class="alert">
-                    
-                </p>
+                <button type="submit">Ingresar estudiante</button>
+                
             </form>
 
             <article class="article-container">
-                <h2>Datos del Estudiante</h2>
-                <div id="student-list"></div>
+                <div class="article-box">
+                    <div class="age-range-container">
+                        <h2>Estudiantes por rango de edades</h2>
+                        <p id="range1" class="message">15-20 años: 0</p>
+                        <p id="range2" class="message">21-25 años: 0</p>
+                        <p id="range3" class="message">26+ años: 0</p>
+                        <hr>
+                    </div>
+
+                    <div class="failed-container">
+                        <h2>Estudiantes Reprobados</h2>
+                        <div class="failed-list"></div>
+                        <br><hr>
+                    </div>
+                </div>
+                
             </article>
         </div>
+        
     </main>
+   
+    <div class="table-container">
+        <h2>Lista de estudiantes</h2>
+        <table id="students-table">
+            <thead >
+                <tr>
+                    <th class="table-head">Nombre</th>
+                    <th class="table-head">Edad</th>
+                    <th class="table-head">Materia</th>
+                    <th class="table-head">Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
 
     <script src="./app.js"></script>
 </body>
